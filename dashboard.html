@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Library Management System</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://kit.fontawesome.com/3cd1b386da.js" crossorigin="anonymous" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body class="layout" data-page="dashboard">
+  <div class="header">
+    <nav class="navbar">
+      <div class="brand">
+        <div class="logo">L</div>
+        <div class="brand-text">
+          <span>Library Pro</span>
+          <small>College LMS</small>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="books.html">Books</a>
+        <a href="students.html">Students</a>
+        <a href="issue.html">Issue</a>
+        <a href="return.html">Return</a>
+        <a href="reports.html">Reports</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <label class="toggle-switch">
+          <input id="theme-toggle" type="checkbox">
+          <span class="slider"></span>
+        </label>
+        <button class="nav-toggle button-icon"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+  </div>
+
+  <main class="main">
+    <section class="container">
+      <div class="section-title">
+        <div>
+          <h1 class="page-title">Dashboard</h1>
+          <p id="dashboard-summary">Your college library admin panel for books, students and records.</p>
+        </div>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <header><h2>Total Books</h2><i class="fas fa-book"></i></header>
+          <div class="value" id="totalBooks">0</div>
+        </div>
+        <div class="card">
+          <header><h2>Total Students</h2><i class="fas fa-user-graduate"></i></header>
+          <div class="value" id="totalStudents">0</div>
+        </div>
+        <div class="card">
+          <header><h2>Issued Books</h2><i class="fas fa-book-reader"></i></header>
+          <div class="value" id="issuedBooks">0</div>
+        </div>
+        <div class="card">
+          <header><h2>Returned Books</h2><i class="fas fa-undo-alt"></i></header>
+          <div class="value" id="returnedBooks">0</div>
+        </div>
+        <div class="card">
+          <header><h2>Overdue Books</h2><i class="fas fa-exclamation-triangle"></i></header>
+          <div class="value" id="overdueBooks">0</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="section-title">
+        <h2>Quick Access</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h2>Manage inventory</h2>
+          <p>Update book details, upload covers and apply category filters from the Books page.</p>
+          <a href="books.html" class="button button-primary">Open Books</a>
+        </div>
+        <div class="card">
+          <h2>Student registry</h2>
+          <p>Add new students, edit records and locate learners with built-in search tools.</p>
+          <a href="students.html" class="button button-primary">Open Students</a>
+        </div>
+        <div class="card">
+          <h2>Reports & exports</h2>
+          <p>View issued, returned, overdue and fine reports with CSV export and printing support.</p>
+          <a href="reports.html" class="button button-primary">Open Reports</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h3>Library Pro</h3>
+        <p>Track all library activity and keep your final year project polished with a professional dashboard.</p>
+      </div>
+      <div class="footer-links">
+        <a href="books.html">Books</a>
+        <a href="students.html">Students</a>
+        <a href="issue.html">Issue</a>
+      </div>
+    </div>
+  </footer>
+  <div class="alert"></div>
+</body>
+</html>

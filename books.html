@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books Management - Library Management System</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://kit.fontawesome.com/3cd1b386da.js" crossorigin="anonymous" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body class="layout" data-page="books">
+  <div class="header">
+    <nav class="navbar">
+      <div class="brand">
+        <div class="logo">L</div>
+        <div class="brand-text">
+          <span>Library Pro</span>
+          <small>College LMS</small>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="books.html" class="active">Books</a>
+        <a href="students.html">Students</a>
+        <a href="issue.html">Issue</a>
+        <a href="return.html">Return</a>
+        <a href="reports.html">Reports</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <label class="toggle-switch">
+          <input id="theme-toggle" type="checkbox">
+          <span class="slider"></span>
+        </label>
+        <button class="nav-toggle button-icon"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+  </div>
+
+  <main class="main">
+    <section class="container">
+      <div class="section-title">
+        <div>
+          <h1 class="page-title">Books Management</h1>
+          <p>Maintain your library catalog, add covers, and keep availability in sync with issued records.</p>
+        </div>
+        <button id="open-book-modal" class="button button-primary">Add Book</button>
+      </div>
+
+      <div class="grid-3" style="margin-bottom: 1rem;">
+        <div class="form-group">
+          <label for="book-search">Search books</label>
+          <input id="book-search" placeholder="Title, author or ISBN">
+        </div>
+        <div class="form-group">
+          <label for="book-category">Filter by category</label>
+          <select id="book-category">
+            <option value="all">All categories</option>
+            <option>Science</option>
+            <option>Technology</option>
+            <option>Mathematics</option>
+            <option>Fiction</option>
+            <option>History</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table id="books-table" class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Cover</th>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Publisher</th>
+              <th>ISBN</th>
+              <th>Category</th>
+              <th>Quantity</th>
+              <th>Available</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div id="book-backdrop" class="modal-backdrop">
+    <div class="modal">
+      <header>
+        <h3 class="modal-title">Add Book</h3>
+        <button id="close-book-modal" class="modal-close"><i class="fas fa-times"></i></button>
+      </header>
+      <form id="book-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input id="title" name="title" required>
+          </div>
+          <div class="form-group">
+            <label for="author">Author</label>
+            <input id="author" name="author" required>
+          </div>
+          <div class="form-group">
+            <label for="publisher">Publisher</label>
+            <input id="publisher" name="publisher" required>
+          </div>
+          <div class="form-group">
+            <label for="isbn">ISBN</label>
+            <input id="isbn" name="isbn" required>
+          </div>
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+              <option value="Science">Science</option>
+              <option value="Technology">Technology</option>
+              <option value="Mathematics">Mathematics</option>
+              <option value="Fiction">Fiction</option>
+              <option value="History">History</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input id="quantity" name="quantity" type="number" min="1" value="1" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="book-cover">Book cover image</label>
+          <input id="book-cover" name="cover" type="file" accept="image/*">
+        </div>
+        <div id="cover-preview" class="cover-preview">Upload cover image or choose a file</div>
+        <div style="display:flex; justify-content:flex-end; gap:0.75rem; margin-top:1rem;">
+          <button type="button" id="close-book-modal" class="button button-secondary">Cancel</button>
+          <button type="submit" class="button button-primary">Save Book</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h3>Books Catalog</h3>
+        <p>Use this page to manage all books, update inventory counts and keep cover images in sync.</p>
+      </div>
+      <div class="footer-links">
+        <a href="students.html">Students</a>
+        <a href="issue.html">Issue</a>
+        <a href="reports.html">Reports</a>
+      </div>
+    </div>
+  </footer>
+  <div class="alert"></div>
+</body>
+</html>

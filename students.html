@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management - Library Management System</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://kit.fontawesome.com/3cd1b386da.js" crossorigin="anonymous" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body class="layout" data-page="students">
+  <div class="header">
+    <nav class="navbar">
+      <div class="brand">
+        <div class="logo">L</div>
+        <div class="brand-text">
+          <span>Library Pro</span>
+          <small>College LMS</small>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="books.html">Books</a>
+        <a href="students.html" class="active">Students</a>
+        <a href="issue.html">Issue</a>
+        <a href="return.html">Return</a>
+        <a href="reports.html">Reports</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <label class="toggle-switch">
+          <input id="theme-toggle" type="checkbox">
+          <span class="slider"></span>
+        </label>
+        <button class="nav-toggle button-icon"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+  </div>
+
+  <main class="main">
+    <section class="container">
+      <div class="section-title">
+        <div>
+          <h1 class="page-title">Students Management</h1>
+          <p>Register learners, manage student details and keep your library community organized.</p>
+        </div>
+        <button id="open-student-modal" class="button button-primary">Add Student</button>
+      </div>
+
+      <div class="form-grid" style="margin-bottom: 1rem;">
+        <div class="form-group">
+          <label for="student-search">Search students</label>
+          <input id="student-search" placeholder="Name, ID or email">
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table id="students-table" class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Department</th>
+              <th>Semester</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div id="student-backdrop" class="modal-backdrop">
+    <div class="modal">
+      <header>
+        <h3 class="modal-title">Add Student</h3>
+        <button id="close-student-modal" class="modal-close"><i class="fas fa-times"></i></button>
+      </header>
+      <form id="student-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" required>
+          </div>
+          <div class="form-group">
+            <label for="department">Department</label>
+            <select id="department" name="department" required>
+              <option>Computer Science</option>
+              <option>Electronics</option>
+              <option>Business</option>
+              <option>Arts</option>
+              <option>Science</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="semester">Semester</label>
+            <select id="semester" name="semester" required>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+            </select>
+          </div>
+        </div>
+        <div style="display:flex; justify-content:flex-end; gap:0.75rem; margin-top:1rem;">
+          <button type="button" id="close-student-modal" class="button button-secondary">Cancel</button>
+          <button type="submit" class="button button-primary">Save Student</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h3>Student Registry</h3>
+        <p>Organize and maintain student details with a simple, responsive management interface.</p>
+      </div>
+      <div class="footer-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="books.html">Books</a>
+        <a href="reports.html">Reports</a>
+      </div>
+    </div>
+  </footer>
+  <div class="alert"></div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Issue Book - Library Management System</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://kit.fontawesome.com/3cd1b386da.js" crossorigin="anonymous" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body class="layout" data-page="issue">
+  <div class="header">
+    <nav class="navbar">
+      <div class="brand">
+        <div class="logo">L</div>
+        <div class="brand-text">
+          <span>Library Pro</span>
+          <small>College LMS</small>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="books.html">Books</a>
+        <a href="students.html">Students</a>
+        <a href="issue.html" class="active">Issue</a>
+        <a href="return.html">Return</a>
+        <a href="reports.html">Reports</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <label class="toggle-switch">
+          <input id="theme-toggle" type="checkbox">
+          <span class="slider"></span>
+        </label>
+        <button class="nav-toggle button-icon"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+  </div>
+
+  <main class="main">
+    <section class="container">
+      <div class="section-title">
+        <div>
+          <h1 class="page-title">Issue Book</h1>
+          <p>Issue books to registered students and manage due dates easily.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <form id="issue-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="issue-student">Select Student</label>
+              <select id="issue-student" name="studentId" required>
+                <option value="">Select student</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="issue-book">Select Book</label>
+              <select id="issue-book" name="bookId" required>
+                <option value="">Select book</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="issueDate">Issue Date</label>
+              <input id="issueDate" name="issueDate" type="date" value="" required>
+            </div>
+            <div class="form-group">
+              <label for="dueDate">Due Date</label>
+              <input id="dueDate" name="dueDate" type="date" value="" required>
+            </div>
+            <div class="form-group">
+              <label for="fine-rate">Fine Rate (₹/day)</label>
+              <input id="fine-rate" type="number" min="0" value="5">
+            </div>
+          </div>
+          <div id="issue-summary" class="card" style="margin-top: 1rem; padding: 1rem;">
+            Select student and book to preview issue details.
+          </div>
+          <div style="display:flex; justify-content:flex-end; margin-top: 1rem; gap:0.75rem;">
+            <button type="submit" class="button button-primary">Issue Book</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h3>Issue Manager</h3>
+        <p>Keep track of student loans and due dates with a professional issue workflow.</p>
+      </div>
+      <div class="footer-links">
+        <a href="return.html">Return</a>
+        <a href="reports.html">Reports</a>
+        <a href="books.html">Books</a>
+      </div>
+    </div>
+  </footer>
+  <div class="alert"></div>
+</body>
+</html>

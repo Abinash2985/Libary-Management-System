@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports - Library Management System</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://kit.fontawesome.com/3cd1b386da.js" crossorigin="anonymous" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body class="layout" data-page="reports">
+  <div class="header">
+    <nav class="navbar">
+      <div class="brand">
+        <div class="logo">L</div>
+        <div class="brand-text">
+          <span>Library Pro</span>
+          <small>College LMS</small>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="books.html">Books</a>
+        <a href="students.html">Students</a>
+        <a href="issue.html">Issue</a>
+        <a href="return.html">Return</a>
+        <a href="reports.html" class="active">Reports</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <label class="toggle-switch">
+          <input id="theme-toggle" type="checkbox">
+          <span class="slider"></span>
+        </label>
+        <button class="nav-toggle button-icon"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+  </div>
+
+  <main class="main">
+    <section class="container">
+      <div class="section-title">
+        <div>
+          <h1 class="page-title">Reports</h1>
+          <p>View, export, and print issued, returned, overdue, and fine reports with ease.</p>
+        </div>
+      </div>
+      <div class="simple-tabs">
+        <button class="simple-tab active" data-target="#issued-report">Issued Books</button>
+        <button class="simple-tab" data-target="#returned-report">Returned Books</button>
+        <button class="simple-tab" data-target="#overdue-report">Overdue Books</button>
+        <button class="simple-tab" data-target="#fine-report">Fine Report</button>
+      </div>
+      <div class="card report-section" id="issued-report">
+        <div class="section-title">
+          <h2>Issued Books</h2>
+          <div>
+            <button class="button button-secondary" data-export="issued">Export CSV</button>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table id="issued-table" class="table">
+            <thead>
+              <tr><th>Issue ID</th><th>Book</th><th>Student</th><th>Issue Date</th><th>Due Date</th><th>Status</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card report-section hidden" id="returned-report">
+        <div class="section-title">
+          <h2>Returned Books</h2>
+          <div>
+            <button class="button button-secondary" data-export="returned">Export CSV</button>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table id="returned-table" class="table">
+            <thead>
+              <tr><th>Issue ID</th><th>Book</th><th>Student</th><th>Issue Date</th><th>Return Date</th><th>Fine</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card report-section hidden" id="overdue-report">
+        <div class="section-title">
+          <h2>Overdue Books</h2>
+          <div>
+            <button class="button button-secondary" data-export="overdue">Export CSV</button>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table id="overdue-table" class="table">
+            <thead>
+              <tr><th>Issue ID</th><th>Book</th><th>Student</th><th>Due Date</th><th>Overdue Days</th><th>Status</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card report-section hidden" id="fine-report">
+        <div class="section-title">
+          <h2>Fine Report</h2>
+          <div>
+            <button class="button button-secondary" data-export="fine">Export CSV</button>
+            <button id="print-reports" class="button button-primary">Print Report</button>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table id="fine-table" class="table">
+            <thead>
+              <tr><th>Issue ID</th><th>Book</th><th>Student</th><th>Return Date</th><th>Fine</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h3>Library Reports</h3>
+        <p>Export CSV files for issued, returned, overdue and fine categories without leaving the browser.</p>
+      </div>
+      <div class="footer-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="return.html">Return</a>
+        <a href="books.html">Books</a>
+      </div>
+    </div>
+  </footer>
+  <div class="alert"></div>
+</body>
+</html>
